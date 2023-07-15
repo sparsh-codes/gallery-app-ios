@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchNewPicturesCell" rowHeight="197" id="toJ-mf-kiv" customClass="SearchNewPicturesCell" customModule="GalleryApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="542" height="197"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="toJ-mf-kiv" id="2Id-rj-ANI">
+                <rect key="frame" x="0.0" y="0.0" width="542" height="197"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search New Pictures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQl-ad-0Jz">
+                        <rect key="frame" x="10" y="10" width="159" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="people/nature/office" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BQm-5Z-FCJ">
+                        <rect key="frame" x="10" y="51" width="522" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="q1p-aa-Yex"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvO-V0-xrk">
+                        <rect key="frame" x="150" y="129" width="242" height="38"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Search">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="searchButtonAction:" destination="toJ-mf-kiv" eventType="touchUpInside" id="UqR-mZ-bO2"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mQl-ad-0Jz" firstAttribute="top" secondItem="2Id-rj-ANI" secondAttribute="top" constant="10" id="1bH-G0-fYR"/>
+                    <constraint firstItem="mQl-ad-0Jz" firstAttribute="leading" secondItem="2Id-rj-ANI" secondAttribute="leading" constant="10" id="4a2-Sk-wCw"/>
+                    <constraint firstItem="RvO-V0-xrk" firstAttribute="top" secondItem="BQm-5Z-FCJ" secondAttribute="bottom" constant="30" id="4ry-LJ-2Mt"/>
+                    <constraint firstAttribute="trailing" secondItem="RvO-V0-xrk" secondAttribute="trailing" constant="150" id="6l1-bd-VIy"/>
+                    <constraint firstAttribute="bottom" secondItem="RvO-V0-xrk" secondAttribute="bottom" constant="30" id="Ck2-md-o3t"/>
+                    <constraint firstItem="BQm-5Z-FCJ" firstAttribute="leading" secondItem="2Id-rj-ANI" secondAttribute="leading" constant="10" id="MmW-H1-0b9"/>
+                    <constraint firstItem="BQm-5Z-FCJ" firstAttribute="top" secondItem="mQl-ad-0Jz" secondAttribute="bottom" constant="20" id="MwA-dk-Azt"/>
+                    <constraint firstItem="RvO-V0-xrk" firstAttribute="leading" secondItem="2Id-rj-ANI" secondAttribute="leading" constant="150" id="UbT-BM-Tqp"/>
+                    <constraint firstAttribute="trailing" secondItem="BQm-5Z-FCJ" secondAttribute="trailing" constant="10" id="myV-Vg-gGi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textField" destination="BQm-5Z-FCJ" id="Ox2-X5-XKA"/>
+            </connections>
+            <point key="canvasLocation" x="215.26717557251908" y="61.619718309859159"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
